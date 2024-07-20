@@ -31,21 +31,30 @@ const Results = () => {
 
   return (
     <LayOut>
-      <section>
-        <h1 style={{ padding: "30px" }}>Results</h1>
-        <p style={{ padding: "30px" }}>Category/{categoryName}</p>
-        <hr />
+      <>
         {isLoading ? (
           <Loader />
         ) : (
-          <div className={classes.products_container}>
-            {results?.map((product) => {
-              return <ProductCard key={product.id} product={product}
-              renderAdd={true}/>;
-            })}
-          </div>
+            <section className={
+              classes.single_Category_images
+          }>
+            <h1 style={{ padding: "30px" }}>Results</h1>
+            <p style={{ padding: "30px" }}>Category/{categoryName}</p>
+            <hr />
+            <div className={classes.products_container}>
+              {results?.map((product) => {
+                return (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    renderAdd={true}
+                  />
+                );
+              })}
+            </div>
+          </section>
         )}
-      </section>
+      </>
     </LayOut>
   );
 }

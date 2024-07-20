@@ -6,7 +6,7 @@ import LayOut from '../../Components/LayOut/LayOut';
 import ProductCard from '../../Components/product/ProductCard';
 import CurrencyFormate from '../../Components/CurrencyFormat/CurrencyFormat';
 import { Link } from 'react-router-dom';
-import { Type } from '../../Utility/action.type';
+import { Type } from '../../Utils/action.type';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 const Cart = () => {
@@ -45,7 +45,7 @@ const Cart = () => {
                   renderDesc={true}
                   renderAdd={false}
                   flex={true}
-                />
+                 />
                 <div className={classes.btn_container}>
                   <button
                     className={classes.btn}

@@ -7,3 +7,4 @@ const CurrencyFormate = ({ amount}) => {
   return <div>{ formatedamount}</div>
 }
 export default CurrencyFormate
+

@@ -3,7 +3,7 @@ import classes from './header.module.css'
 import logo from '../../assets/images/amazon-logo.png'
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosSearch } from "react-icons/io";
-import Flag from '../../assets/images/EN-flag.png'
+import Flag from '../../assets/images/En--flag.png'
 import { BiCart } from "react-icons/bi";
 import LowerHeader from './LowerHeader';
 import {Link} from 'react-router-dom'
@@ -71,7 +71,7 @@ const Header = () => {
 
             <Link to="/cart" className={classes.cart}>
               <BiCart />
-              <span>{ totalItem}</span>
+              <span>{basket.length  }</span>
             </Link>
           </div>
         </div>

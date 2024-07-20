@@ -4,10 +4,12 @@
   gap: 20px;
   margin-top: 2px;
 }
+
 .container img{
   width: 100px !important;
 
 }
+
 .cart_product{
   display: flex;
   gap: 10px;
@@ -36,6 +38,7 @@
 }
 .cart_container{
   padding: 20px;
+  border: none;
 }
 .cart_container h2,
 .cart_container h3{
@@ -47,7 +50,6 @@
 .subtotal{
   padding: 20px;
   min-width: 300px;
-
   display: flex;
   flex-direction: column;
   align-items: center;

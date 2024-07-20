@@ -1,11 +1,7 @@
-
-
-
-
-import electronics from './image/electronics1.jpg'
-import femalFashion from "./image/femalFashion2.jpg";
-import menFashion from './image/menFashion.jpg'
-import jewelery from './image/jewlery2_.jpg'
+import electronics from "../../assets/images/CategoryImage/electronics1.jpg";
+import femalFashion from "../../assets/images/CategoryImage/femalFashion2.jpg";
+import menFashion from "../../assets/images/CategoryImage/menFashion.jpg";
+import jewelery from "../../assets/images/CategoryImage/jewlery2_.jpg";
 export const catagoryImage = [
   {
     title: "Electronics",

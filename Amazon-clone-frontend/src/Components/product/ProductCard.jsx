@@ -4,7 +4,7 @@ import Rating from "@mui/material/Rating";
 import CurrencyFormate from '../CurrencyFormat/CurrencyFormat';
 import { Link } from 'react-router-dom'
 import { DataContext } from '../DataProvider/DataProvider';
-import { Type } from '../../Utility/action.type';
+import { Type } from '../../Utils/action.type';
 
 
 const ProductCard = ({ product, flex, renderDesc,renderAdd }) => {

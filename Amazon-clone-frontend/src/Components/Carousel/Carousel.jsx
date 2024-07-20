@@ -1,7 +1,7 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";// To add style for the carousel
 import { Carousel } from 'react-responsive-carousel'
-import { img } from './images/data'
+import { img } from './data'
 import classes from "./carousel.module.css";
 const CarouselEffect = () => {
   return (
