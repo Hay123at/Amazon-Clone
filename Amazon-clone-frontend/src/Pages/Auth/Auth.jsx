@@ -14,7 +14,7 @@ const Auth = () => {
   const [{ user }, dispatch] = useContext(DataContext)
   const navigate = useNavigate();
   const navStateData = useLocation()
-  console.log(navStateData);
+
   const [loading, setLoading] = useState({
     signIn: false,
     signUp:false

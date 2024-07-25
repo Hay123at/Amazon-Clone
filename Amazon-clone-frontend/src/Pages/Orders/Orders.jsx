@@ -15,7 +15,7 @@ const Orders = () => {
 
 
       db.collection("users").doc(user.uid).collection("orders").orderBy("created", "desc").onSnapshot((snapshot) => {
-          console.log(snapshot);
+          
         setOrders(snapshot?.docs?.map((doc) => 
           
             ({id: doc.id,

@@ -38,7 +38,7 @@ const Payment = () => {
         method: "POST",
         url: `/payments/create?total=${total * 100}`,
       });
-      console.log(response.data);
+      
       const clientSecret = response.data?.clientSecret;
       // 2.Client side (react side confirmation)
       const {paymentIntent} = await stripe.confirmCardPayment(clientSecret, {
@@ -90,8 +90,8 @@ dispatch({type:Type.EMPTY_BASKET})
         <div className={classes.flex}>
           <h3>Review items and delivery</h3>
           <div>
-            {basket?.map((item) => (
-              <ProductCard product={item} flex={true} />
+            {basket?.map((item,i) => (
+              <ProductCard product={item} flex={true} key={i}/>
             ))}
           </div>
         </div>

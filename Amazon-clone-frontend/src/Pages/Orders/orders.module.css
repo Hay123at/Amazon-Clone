@@ -13,7 +13,8 @@
 }
 .orders_container p{
  
-  padding: 15px;
+  padding: 12px;
+ 
 
 }
 .orders_container img{
@@ -21,4 +22,10 @@
 }
 .orders_container div{
   height: auto !important;
+}
+
+@media (max-width:425px){
+  .orders_container p{
+   font-size: 13px;
+  }
 }

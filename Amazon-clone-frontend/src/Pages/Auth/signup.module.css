@@ -72,3 +72,19 @@ background-color: #DDDDDD;
 .Auth_inner_wrapper .register:hover{
   background-color: rgb(171, 168, 168);
 }
+@media (max-width:550px){
+.Auth_outer_wrapper{
+  width:70%;
+}
+.Auth_logo img{
+  width:50%
+}
+.Auth_logo{
+  width: 50%;
+}
+}
+@media (max-width:768px){
+  .Auth_outer_wrapper{
+  width:45%;
+}
+}
