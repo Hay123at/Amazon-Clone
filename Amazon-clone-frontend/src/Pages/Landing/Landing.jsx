@@ -4,6 +4,7 @@ import LayOut from '../../Components/LayOut/LayOut';
 import Category from '../../Components/Category/Category';
 import Product from '../../Components/product/Product';
 import CarouselEffect from '../../Components/Carousel/Carousel';
+import Auth from '../Auth/Auth';
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
         <Category />
         <Product />
       </LayOut>
+
     </div>
   );
 }

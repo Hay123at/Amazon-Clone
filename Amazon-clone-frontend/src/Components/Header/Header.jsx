@@ -8,15 +8,15 @@ import { BiCart } from "react-icons/bi";
 import LowerHeader from './LowerHeader';
 import {Link} from 'react-router-dom'
 import { DataContext } from '../DataProvider/DataProvider';
+import {auth} from '../../Utils/firebase'
 const Header = () => {
-  const [{ basket }, dispatch] = useContext(DataContext)
+  const [{ user,basket }, dispatch] = useContext(DataContext)
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount +amount
   },0)
 
   return (
     <section className={classes.fixed}>
-
       <section>
         <div className={classes.header_container}>
           <div className={classes.header_logo_container}>
@@ -43,7 +43,7 @@ const Header = () => {
             </select>
             <input type="text" name="" id="" placeholder="search product" />
 
-            <IoIosSearch size={25} />
+            <IoIosSearch size={38} />
           </div>
           {/* right side icon */}
           <div className={classes.order_container}>
@@ -56,9 +56,20 @@ const Header = () => {
               </select>
             </Link>
             {/* sign in  */}
-            <Link to="">
-              <p>Sign in</p>
-              <span>Account & Lists</span>
+            <Link to={!user && "/SignUp"}>
+              <div>
+                {user ? (
+                  <>
+                    <p>Hello {user?.email?.split("@")[0]}</p>
+                    <span onClick={()=>auth.signOut()}>Sign Out</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Sign in</p>
+                    <span>Account & Lists</span>
+                  </>
+                )}
+              </div>
             </Link>
             {/* orders */}
 
@@ -71,7 +82,7 @@ const Header = () => {
 
             <Link to="/cart" className={classes.cart}>
               <BiCart />
-              <span>{basket.length  }</span>
+              <span>{basket.length}</span>
             </Link>
           </div>
         </div>
